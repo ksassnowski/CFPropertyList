@@ -188,6 +188,7 @@ class CFArray extends CFType implements Iterator, ArrayAccess
    * @return mixed current Item
    * @uses $iteratorPosition identify current key
    */
+   #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->value[$this->iteratorPosition];
@@ -199,6 +200,7 @@ class CFArray extends CFType implements Iterator, ArrayAccess
    * @return mixed key of the current Item: mixed
    * @uses $iteratorPosition identify current key
    */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->iteratorPosition;
@@ -252,6 +254,7 @@ class CFArray extends CFType implements Iterator, ArrayAccess
    * @uses get() to get the key's value
    * @author Sean Coates <sean@php.net>
    */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->get($offset);

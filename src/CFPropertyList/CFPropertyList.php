@@ -680,7 +680,7 @@ class CFPropertyList extends CFBinaryPropertyList implements Iterator
    * @uses $iteratorPosition identify current key
    * @uses $iteratorKeys identify current value
    */
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->value[$this->iteratorKeys[$this->iteratorPosition]];
@@ -693,7 +693,7 @@ class CFPropertyList extends CFBinaryPropertyList implements Iterator
    * @uses $iteratorPosition identify current key
    * @uses $iteratorKeys identify current value
    */
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->iteratorKeys[$this->iteratorPosition];
@@ -705,7 +705,7 @@ class CFPropertyList extends CFBinaryPropertyList implements Iterator
    * @return void
    * @uses $iteratorPosition increment by 1
    */
-    public function next()
+    public function next(): void
     {
         $this->iteratorPosition++;
     }

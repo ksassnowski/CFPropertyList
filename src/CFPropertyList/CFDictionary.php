@@ -193,6 +193,7 @@ class CFDictionary extends CFType implements Iterator
     * @uses $iteratorPosition identify current key
     * @uses $iteratorKeys identify current value
     */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->value[$this->iteratorKeys[$this->iteratorPosition]];
@@ -204,6 +205,7 @@ class CFDictionary extends CFType implements Iterator
     * @uses $iteratorPosition identify current key
     * @uses $iteratorKeys identify current value
     */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->iteratorKeys[$this->iteratorPosition];
